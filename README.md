@@ -1,4 +1,5 @@
 # PyCon-KR-2017
+SQLAlchemy and Alembic slides for PyCon KOREA 2017
 
 ## Getting Started
 
