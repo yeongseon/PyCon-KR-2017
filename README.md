@@ -4,7 +4,7 @@ source venv/activa
 
 jupyter nbconvert "SQLAlchemy and Alembic.ipynb" --to slides --post serve
 
-<div>
+<pre>
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
@@ -13288,7 +13288,42 @@ datefmt = %H:%M:%S
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[28]:</div>
-<div class="inner_cell">
+<# GNU Screen - main configuration file 
+# All other .screenrc files will source this file to inherit settings.
+# Author: Christian Wills - cwills.sys@gmail.com
+
+# Allow bold colors - necessary for some reason
+attrcolor b ".I"
+
+# Tell screen how to set colors. AB = background, AF=foreground
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
+# Enables use of shift-PgUp and shift-PgDn
+termcapinfo xterm|xterms|xs|rxvt ti@:te@
+
+# Erase background with current bg color
+defbce "on"
+
+# Enable 256 color term
+term xterm-256color
+
+# Cache 30000 lines for scroll back
+defscrollback 30000
+
+# New mail notification
+backtick 101 30 15 $HOME/bin/mailstatus.sh
+
+hardstatus alwayslastline 
+# Very nice tabbed colored hardstatus line
+hardstatus string '%{= Kd} %{= Kd}%-w%{= Kr}[%{= KW}%n %t%{= Kr}]%{= Kd}%+w %-= %{KG} %H%{KW}|%{KY}%101`%{KW}|%D %M %d %Y%{= Kc} %C%A%{-}'
+
+# change command character from ctrl-a to ctrl-b (emacs users may want this)
+#escape ^Bb
+
+# Hide hardstatus: ctrl-a f 
+bind f eval "hardstatus ignore"
+# Show hardstatus: ctrl-a F
+bind F eval "hardstatus alwayslastline"div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;create tables</span>
 
@@ -13350,4 +13385,4 @@ INFO  [alembic.runtime.migration] Running upgrade  -&gt; 8de6f753dcac, create ta
 
 
 </html>
-</div>
+</pre>
