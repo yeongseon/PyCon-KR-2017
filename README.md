@@ -4,7 +4,8 @@ source venv/activa
 
 jupyter nbconvert "SQLAlchemy and Alembic.ipynb" --to slides --post serve
 
-<pre>
+```html
+
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
@@ -13385,4 +13386,4 @@ INFO  [alembic.runtime.migration] Running upgrade  -&gt; 8de6f753dcac, create ta
 
 
 </html>
-</pre>
+```
