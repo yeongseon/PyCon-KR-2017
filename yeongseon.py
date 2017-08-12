@@ -1,4 +1,4 @@
 
 name = "yeongseon choe"
-job = "python infrastructure devloper"
+job = "Python Infrastructure Devloper"
 
